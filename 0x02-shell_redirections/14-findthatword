@@ -1,0 +1,2 @@
+#!/bin/bash
+grep --ignore-case 'root' /etc/passwd
