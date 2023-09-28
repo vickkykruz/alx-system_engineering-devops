@@ -9,5 +9,5 @@ LIST=$(ls)
 
 for dir in $LIST;
 do
-	echo "$dir" | cut -d "_" -f 2-
+	echo "$dir" | cut -d "-" -f 2-
 done
