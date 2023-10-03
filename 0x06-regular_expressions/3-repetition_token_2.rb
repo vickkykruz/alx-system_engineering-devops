@@ -1,4 +1,4 @@
 #!/usr/bin/env ruby
 # This is a ruby script that find the regular expression that will match
 # the above cases
-puts ARGV[0].scan(/htb{1,}n/).join
+puts ARGV[0].scan(/htb+n/).join
