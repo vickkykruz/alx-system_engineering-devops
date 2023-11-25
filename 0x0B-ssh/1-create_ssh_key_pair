@@ -5,4 +5,4 @@ key_name="school"
 key_bits=4096
 passphrase="betty"
 
-ssh-keygen -t rsa -b $key_bits -f ~/.ssh/$key_name -N "$passphrase"
+ssh-keygen -t rsa -b $key_bits -f $key_name -N "$passphrase"
