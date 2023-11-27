@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# Web servers are the piece of software generating and serving HTML pages.
+
+# Update the package list
+sudo apt-get update
+
+# Install Nginix
+sudo apt-get install -y nginx
+
+# Start Nginx (it will automatically be listening on port 80)
+sudo service nginx start
+
+# Create a default HTML page with the string "Hello World"
+echo "Hello World!" | sudo tee /var/www/html/index.html
