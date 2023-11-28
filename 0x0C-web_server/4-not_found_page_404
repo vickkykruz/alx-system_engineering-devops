@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# write 4-not_found_page_404 so that it configures a brand new Ubuntu machine to the requirements asked in this task
+
+# Updaye app-get
+app-get -y update
+
+# Install mginx
+app-get -y install nginx
+
+# echo Hello World to index.htm
+echo "Hello World" > /var/www/html/index.html;
+
+# echo some string to the custom_404.html
+echo "Ceci n'est pas une page" > /usr/share/nginx/html/custom_404.html
+
+# To work it out
+sed -i "s/server_name _;/server_name _;\n\trewrite https:\/\/github.com\/vickkykruz permanent;\n\nterror_page 404 \/custom_404.html;\n\tlocation = \/custom_404.html {\n\t\troot \/usr\/share\/nginx\/html;\n\tinternal;\n\t}/" /etc/nginx/sites-available/default
+
+# Restart the system
+sudo service restart
