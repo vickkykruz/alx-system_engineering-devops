@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Define the path to the ufw configuration file
+UFW_CONFIG_FILE="/etc/ufw/before.rules"
+
+# Add port redirection rules to before.rules
+echo "*nat
+:PREROUTING ACCEPT [0:0]
+-A PREROUTING -p tcp --dport 8080 -j REDIRECT --to-port 80
+COMMIT" | sudo tee -a "$UFW_CONFIG_FILE" > /dev/null
+
+# Check the validity of the ufw rules
+if sudo ufw --dry-run enable; then
+    # If rules are valid, reload ufw to apply changes
+    sudo ufw reload
+    echo "Port redirection rules successfully added and applied."
+else
+    # If there are errors, display an error message
+    echo "Error: There was an issue with the ufw rules. Please check the configuration."
+fi
