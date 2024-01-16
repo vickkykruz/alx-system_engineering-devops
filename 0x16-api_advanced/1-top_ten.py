@@ -19,4 +19,4 @@ def top_ten(subreddit):
         for title in data['data']['children']:
             print(title['data']['title'])
     else:
-        printf("None")
+        print("None")
