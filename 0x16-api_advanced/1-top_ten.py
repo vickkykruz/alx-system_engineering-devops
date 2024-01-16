@@ -8,10 +8,14 @@ import requests
 
 def top_ten(subreddit):
     """ This is function that return the top ten posts """
-    url = f'https://www.reddit.com/r/{subreddit}/hot.json?limit=10'
-    headers = {'User-Agent': 'CustomUserAgent/1.0'}
+    url = f'https://www.reddit.com/r/{subreddit}/hot/.json'
+    headers = {'User-Agent': 'script for 0x16-api_adavance: by (vickkykruz)'}
+    params = {'limit': 10 }
 
-    requestData = requests.get(url, headers=headers)
+    requestData = requests.get(url,
+                               headers=headers,
+                               params=params,
+                               allow_redirects=False)
 
     if requestData.status_code == 200:
 
