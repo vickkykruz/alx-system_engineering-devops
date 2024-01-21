@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# This script is to configed it directly without troubleshoot
+ln -sI /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+sudo service nginx restart
+rm /run/nginx.pid

@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
-# Load balance Server connection
+# server lohin1
 
 eval $("ssh-agent")
 ssh-add ~/.ssh/school
 
-ssh ubuntu@54.237.98.187
+
+ssh ubuntu@34.229.161.208

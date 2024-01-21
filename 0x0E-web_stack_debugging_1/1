@@ -3,6 +3,7 @@ Failed to connect to bus: Host is down
 System has not been booted with systemd as init system (PID 1). Can't operate.
 Failed to connect to bus: Host is down
 ii  net-tools                      1.60+git20180626.aebd88e-1ubuntu1 amd64        NET-3 networking toolkit
+ii  net-tools                                      2.10-0.1                       amd64        NET-3 networking toolkit
 System has not been booted with systemd as init system (PID 1). Can't operate.
 Failed to connect to bus: Host is down
 Failed to make Nginx listen on port 80. Please check the configuration manually.

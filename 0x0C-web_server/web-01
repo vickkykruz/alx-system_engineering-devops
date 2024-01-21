@@ -1,8 +1,7 @@
-#!/usr/bin/env bash
-# server lohin1
+
 
 eval $("ssh-agent")
 ssh-add ~/.ssh/school
 
 
-ssh ubuntu@34.229.161.208
+ssh ubuntu@54.172.239.29
